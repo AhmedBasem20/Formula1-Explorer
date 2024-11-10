@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SeasonListItem = ({ season }) => {
     return (
-        <Link to={`/seasons/${season.season}`} className="list-item">
+        <Link to={`/Formula1-Exploer/seasons/${season.season}`} className="list-item">
             <span>Season {season.season}</span>
         </Link>
     );

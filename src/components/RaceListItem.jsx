@@ -5,7 +5,7 @@ import { TbPinned, TbPinnedFilled } from "react-icons/tb";
 const RaceListItem = ({ race, isPinned, togglePin }) => {
     return (
         <div className="list-item">
-            <Link to={`/seasons/${race.season}/races/${race.round}`}>
+            <Link to={`/Formula1-Exploer/seasons/${race.season}/races/${race.round}`}>
                 <span>Race: {race.raceName}</span>
             </Link>
             {/* <h5>Circuet: {race.Circuit.circuitName}</h5>

@@ -5,14 +5,14 @@ on:
     branches:
     - main
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: write-all
   
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      COMMIT_AUTHOR: Deploy Action
+      COMMIT_AUTHOR_EMAIL: action@github.com
 
     steps:
     - name: Checkout Repo ⚡️

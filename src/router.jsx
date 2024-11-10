@@ -9,13 +9,13 @@ const AppRouter = () => (
     <Router>
         <Routes>
             {/* Route for the Seasons listing page */}
-            <Route path="/" element={<SeasonsPage />} />
+            <Route path="/Formula1-Exploer/" element={<SeasonsPage />} />
 
             {/* Route for Races of a selected season */}
-            <Route path="/seasons/:season" element={<RacesPage />} />
+            <Route path="/Formula1-Exploer/seasons/:season" element={<RacesPage />} />
 
             {/* Route for Race Details of a specific race in a season */}
-            <Route path="/seasons/:season/races/:round" element={<RaceDetailsPage />} />
+            <Route path="/Formula1-Exploer/seasons/:season/races/:round" element={<RaceDetailsPage />} />
 
         </Routes>
     </Router>
