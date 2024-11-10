@@ -5,6 +5,11 @@ on:
     branches:
     - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  
 jobs:
   webpage:
     runs-on: ubuntu-latest
@@ -24,4 +29,5 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
         publish_dir: ./dist
