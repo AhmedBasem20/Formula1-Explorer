@@ -13,6 +13,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      COMMIT_AUTHOR: Deploy Action
+      COMMIT_AUTHOR_EMAIL: action@github.com
 
     steps:
     - name: Checkout Repo ⚡️
