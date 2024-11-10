@@ -37,7 +37,6 @@ export const PointsChart = ({ raceResults }) => {
 };
 
 export const FastestLapComparison = ({ raceResults }) => {
-    // Prepare data for the chart
     const driverNames = raceResults.map(result => result.Driver.familyName);
 
     const lapNumbers = raceResults.map(result => parseInt(result.FastestLap?.lap));
@@ -47,10 +46,9 @@ export const FastestLapComparison = ({ raceResults }) => {
             const [minutes, seconds] = timeString.split(':');
             return parseFloat(minutes) * 60 + parseFloat(seconds);
         } else {
-            // Return a default value, e.g., a large number to indicate no valid time
-            return null; // or use a specific large number if you want it to appear at the bottom of the chart
+            return null;
         }
-    }).filter(time => time !== null); // Optionally, filter out null values if you don't want them in the plot
+    }).filter(time => time !== null);
 
     const averageSpeeds = raceResults.map(result => parseFloat(result.FastestLap?.AverageSpeed.speed));
 
@@ -61,11 +59,11 @@ export const FastestLapComparison = ({ raceResults }) => {
             text: driverNames.map((name, index) => `${name}: ${fastestLapTimes[index]}s`),
             mode: 'markers',
             marker: {
-                size: averageSpeeds, // Bubble size based on speed
+                size: averageSpeeds,
                 sizemode: 'area',
-                sizeref: 2 * Math.max(...averageSpeeds) / 100, // Adjust sizeref for better scaling
-                color: lapNumbers, // Optional: Color based on lap number
-                colorscale: 'Viridis', // Color scale for better visualization
+                sizeref: 2 * Math.max(...averageSpeeds) / 100,
+                color: lapNumbers,
+                colorscale: 'Viridis',
                 showscale: true,
                 colorbar: {
                     title: 'Lap Number',
@@ -121,7 +119,7 @@ export const RaceFinishingTimeComparison = ({ raceResults }) => {
                     type: 'bar',
                     orientation: 'h', // Horizontal bars
                     marker: {
-                        color: 'rgba(255, 99, 71, 0.6)', // Customize bar color (optional)
+                        color: 'rgba(255, 99, 71, 0.6)',
                         line: { color: 'rgba(255, 99, 71, 1)', width: 1 }
                     }
                 }
@@ -136,7 +134,7 @@ export const RaceFinishingTimeComparison = ({ raceResults }) => {
                     autorange: 'reversed' // Shortest time at the top
                 },
                 margin: {
-                    l: 100, // More space on the left for driver names
+                    l: 100,
                     r: 50,
                     t: 50,
                     b: 50
