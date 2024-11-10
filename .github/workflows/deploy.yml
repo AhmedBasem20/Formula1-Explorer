@@ -26,9 +26,9 @@ jobs:
         npm install
         npm run build
     - name: Upload build artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './dist'
 
   deploy:
     needs: build
