@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SeasonCard = ({ season }) => {
     return (
-        <Link to={`/Formula1-Exploer/seasons/${season.season}`} className="card-item">
+        <Link to={`/Formula1-Explorer/seasons/${season.season}`} className="card-item">
             <h2>Season {season.season}</h2>
             <p>Explore races for this season</p>
         </Link>

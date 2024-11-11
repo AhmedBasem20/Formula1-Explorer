@@ -10,7 +10,7 @@ const RaceCard = ({ race, isPinned, togglePin }) => {
                 {isPinned ? <TbPinnedFilled size={20} /> : <TbPinned size={20} />}
 
             </button>
-            <Link to={`/Formula1-Exploer/seasons/${race.season}/races/${race.round}`}>
+            <Link to={`/Formula1-Explorer/seasons/${race.season}/races/${race.round}`}>
                 <h2>Race: {race.raceName}</h2>
             </Link>
             <h3>Circuet: {race.Circuit.circuitName}</h3>
