@@ -119,8 +119,7 @@ export const RaceFinishingTimeComparison = ({ raceResults }) => {
                     type: 'bar',
                     orientation: 'h', // Horizontal bars
                     marker: {
-                        color: 'rgba(255, 99, 71, 0.6)',
-                        line: { color: 'rgba(255, 99, 71, 1)', width: 1 }
+                        color: 'rgba(255,0,0, 0.6)'
                     }
                 }
             ]}
@@ -133,13 +132,9 @@ export const RaceFinishingTimeComparison = ({ raceResults }) => {
                     title: 'Driver',
                     autorange: 'reversed' // Shortest time at the top
                 },
-                margin: {
-                    l: 100,
-                    r: 50,
-                    t: 50,
-                    b: 50
-                }
             }}
+            config={{ responsive: true }}
+            style={{ width: '100%', height: '100%' }}
         />
     );
 };

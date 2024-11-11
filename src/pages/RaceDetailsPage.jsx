@@ -35,12 +35,10 @@ export default function RaceDetailsPage() {
     <>
       <h1>Formula 1 {raceResult.raceName} {season} - Race Result</h1>
       <DriverList driverData={raceResult.Results} />
-      <h2>Race Points Distribution</h2>
+      <h2>Performance Insights</h2>
       <PointsChart raceResults={raceResult.Results} />
-      <h2>Race Points Distribution</h2>
 
       <FastestLapComparison raceResults={raceResult.Results} />
-      <h2>Race Points Distribution</h2>
 
       <RaceFinishingTimeComparison raceResults={raceResult.Results} />
 
