@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Formula1-Exploer/'
+  base: '/Formula1-Explorer/'
 });
